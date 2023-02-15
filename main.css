@@ -1,9 +1,36 @@
 main {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: black;
 }
+img {
+border-radius: 2px;
+margin-bottom: 15px;
+border-width: 5px;
+border-style: groove;
+border-color: grey;
+}
+/*.fighter {
+  display: grid;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}*/
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
 .calendar {
     display: flex;
     justify-content: center;
