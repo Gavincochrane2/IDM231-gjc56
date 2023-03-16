@@ -1,3 +1,10 @@
+html {
+  background-color: rgb(113, 113, 112);
+  background-image: url(media/Octagon.jpeg);
+  background-position: center;
+  background-size: auto;
+  background-size:cover;
+}
 main {
     margin: auto;
     display: flex;
@@ -5,14 +12,17 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    /*background-color: black;
+    background-image: url(media/Octagon.jpeg);
+    background-position: center;*/
 }
 img {
-border-radius: 2px;
+border-radius: 40px;
 margin-bottom: 15px;
 border-width: 5px;
 border-style: groove;
 border-color: grey;
+border
 }
 /*.fighter {
   display: grid;
@@ -21,17 +31,78 @@ border-color: grey;
   align-items: space-between;
 }*/
 
-h1 {
-  display: flex;
+.adesanya-card, .islam-card, .jiri-card, .jones-card, .khabib-card, .connor-card, .mighty-card, .paddy-card, .alex-card, .glover-card, .tony-card, .volk-card, .question-card {
+  background-color: #fff;
+  position: fixed;
+  max-height: 90vh;
+  min-height: 31.25rem;
+  width: 31.25rem;
+  width: 50%;
+  margin: 0 25vw;
+  top: 10vh;
+  z-index: 10;
+  padding: 3rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-color
+  
 }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+  }
 
 h2 {
   display: flex;
   justify-content: center;
+  font-weight: 500;
+}
+h1, h2 {
+  color: white;
 }
 
-.calendar {
+.birthday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.js-submit-button {
+  transition: all .2s ease-in-out;
+}
+
+.js-submit-button:hover {
+  transform: scale(1.1);
+}
+.hover_title {
+  color: white;
+  padding: 1rem;
+}
+.hover_desc {
+  color: white;
+  line-height: 30px;
+  padding: 1rem;
+}
+
+.question-button {
+  color: white;
+  background:black;
+  border-radius: 5px;
+  padding: .3rem;
+  display: block;
+  margin: left;
+}
+
+.hidden {
+  display: none;
+
+/*.calendar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,3 +115,4 @@ h2 {
     font-size: 18px;
     margin: 0 10px;
   }
+  */

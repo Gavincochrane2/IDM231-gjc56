@@ -11,7 +11,7 @@
     <header>
         <h1>Welcome to the UFC horiscope calculator!</h1>
         <h2>Select your birthday</h2>
-        <div class="calendar">
+       <!-- <div class="calendar">
         <select id="month">
             <option value="0">January</option>
             <option value="1">February</option>
@@ -30,21 +30,306 @@
           </select>
           <select id="year">
           </select>
-        </div>
+        </div>-->
+        <form class="birthday">
+            <!--<label for="birthdayInput" class="bday_text"> Enter Your
+                Birthday:</label> -->
+            <input id="birthdayInput" class="js-date-input" type="date" name="birthday">
+            <button class="js-submit-button" type="button">Submit</button>
+        </form>
     </header>
     <main>
-        <img class="fighter" src="media/Adesanya.jpg" alt="Isreal Adesanya">
-        <img class="fighter" src="media/Islam.jpg" alt="Islam Makachev">
-        <img class="fighter" src="media/Jiri.jpg" alt="Jiri">
-        <img class="fighter" src="media/JONES_JON_12-29.jpg" alt="Jon Jones">
-        <img class="fighter" src="media/Khabib.jpg" alt="Khabib">
-        <img class="fighter" src="media/Mcgregor.jpg" alt="Connor McGregor">
-        <img class="fighter" src="media/Mighty-mouse.jpg" alt="Demetrius Johnson">
-        <img class="fighter" src="media/Paddy-pimblet.jpg" alt="Paddy the Baddy">
-        <img class="fighter" src="media/pereira.jpg" alt="Alex Pereira">
-        <img class="fighter" src="media/Texiera.jpg" alt="Glover Texiera">
-        <img class="fighter" src="media/tony-ferguson.jpg" alt="Tony Furguson">
-        <img class="fighter" src="media/Volk.jpg" alt="Alexander Volkanovski">
+        <!-- <img id="adesanya" src="media/Adesanya.jpg" alt="Isreal Adesanya">
+        <img id="islam" src="media/Islam.jpg" alt="Islam Makachev">
+        <img id="jri" src="media/Jiri.jpg" alt="Jiri">
+        <img id="jones" src="media/JONES_JON_12-29.jpg" alt="Jon Jones">
+        <img id="khabib" src="media/Khabib.jpg" alt="Khabib">
+        <img id="connor" src="media/Mcgregor.jpg" alt="Connor McGregor">
+        <img id="mighty" src="media/Mighty-mouse.jpg" alt="Demetrius Johnson">
+        <img id="paddy" src="media/Paddy-pimblet.jpg" alt="Paddy the Baddy">
+        <img id="alex" src="media/pereira.jpg" alt="Alex Pereira">
+        <img id="glover" src="media/Texiera.jpg" alt="Glover Texiera">
+        <img id="tony" src="media/tony-ferguson.jpg" alt="Tony Furguson">
+        <img id="volk" src="media/Volk.jpg" alt="Alexander Volkanovski"> -->
+
+        <div class="adesanya-card hidden allcards" id="adesanya">
+            <audio id="audio-adesanya" src="sounds/adesanya-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Isreal Adesanya!</h2>
+            <p class="hover_desc">Israel Adesanya is a Nigerian-born New Zealand professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC).
+                He is a former kickboxing and boxing champion and has an undefeated professional MMA record of 21 wins and 1 loss. 
+                Adesanya is known for his striking skills, technical precision, and flamboyant personality both in and out of the octagon. </p>
+            <img class="imagein" src="media/Adesanya.jpg" alt="adesanya-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="islam-card hidden allcards" id="islam">
+            <audio id="audio-islam" src="sounds/islam-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Islam Makhachev!</h2>
+            <p class="hover_desc">Islam Makhachev is a Russian professional mixed martial artist who competes in the Ultimate Fighting Championship (UFC). 
+                He is a former Combat Sambo world champion and has an impressive MMA record of 20 wins and 1 loss. 
+                Makhachev is known for his grappling skills, particularly his dominant wrestling and impressive submission game, and is considered one of the top lightweight prospects in the UFC. </p>
+            <img class="imagein" src="media/Islam.jpg" alt="islam-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="jiri-card hidden allcards" id="jiri">
+            <audio id="audio-jiri" src="sounds/jiri-sound.wav" > </audio>
+            <h2 class="hover_title"> You're like Jiri Prochazka!</h2>
+            <p class="hover_desc">Jiri Prochazka is a Czech professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC). 
+                He is a former Rizin Fighting Federation light heavyweight champion and has an impressive MMA record of 28 wins and 4 losses. 
+                Prochazka is known for his unorthodox and creative striking style, as well as his durability and toughness in the octagon. </p>
+            <img class="imagein" src="media/Jiri.jpg" alt="jiri-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="jones-card hidden allcards" id="jones">
+            <audio id="audio-jones" src="sounds/jones-sound.mp3" > </audio>
+            <h2 class="hover_title"> You're like Jon Jones!</h2>
+            <p class="hover_desc">Jon Jones is an American professional mixed martial artist and former UFC light heavyweight champion. 
+                He is widely considered one of the greatest fighters in MMA history, with a professional record of 26 wins, 1 loss, and 1 no contest. 
+                Jones is known for his impressive striking and grappling abilities, as well as his unorthodox fighting style and ability to adapt to his opponents in the octagon. </p>
+            <img class="imagein" src="media/JONES_JON_12-29.png" alt="jones-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+        
+        <div class="khabib-card hidden allcards" id="khabib">
+            <audio id="audio-khabib" src="sounds/khabib-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Khabib Nurmagomedov!</h2>
+            <p class="hover_desc"> Khabib Nurmagomedov is a retired Russian professional mixed martial artist who competed in the Ultimate Fighting Championship (UFC). 
+                He is a former UFC lightweight champion and had an undefeated professional MMA record of 29 wins and 0 losses. 
+                Khabib is widely regarded as one of the greatest fighters in MMA history, known for his dominating wrestling and grappling skills, as well as his impressive striking and conditioning. </p>
+            <img class="imagein" src="media/Khabib.jpg" alt="khabib-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="connor-card hidden allcards" id="connor">
+            <audio id="audio-connor" src="sounds/connor-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Connor McGregor!</h2>
+            <p class="hover_desc"> Conor McGregor is an Irish professional mixed martial artist and boxer. 
+                He is a former UFC featherweight and lightweight champion and has a professional MMA record of 22 wins and 5 losses. 
+                McGregor is known for his striking abilities, brash personality, and ability to promote fights, which has made him one of the biggest stars in combat sports history. </p>
+            <img class="imagein" src="media/Mcgregor.jpg" alt="connor-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="mighty-card hidden allcards" id="mighty">
+            <audio id="audio-mighty" src="sounds/mighty-sound.wav" > </audio>
+            <h2 class="hover_title"> You're like Demetrius Johnson!</h2>
+            <p class="hover_desc"> Demetrious Johnson, also known as "Mighty Mouse," is an American retired professional mixed martial artist who competed in the UFC. 
+                He is a former UFC flyweight champion and holds the record for most consecutive title defenses in the division. 
+                Johnson is known for his incredible speed, technical striking and grappling abilities, and strategic fighting style, which made him one of the best pound-for-pound fighters in MMA history. </p>
+            <img class="imagein" src="media/Mighty-mouse.jpg" alt="mighty-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="paddy-card hidden allcards" id="paddy">
+            <audio id="audio-paddy" src="sounds/paddy-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Paddy Pimblett!</h2>
+            <p class="hover_desc"> Paddy Pimblett is a British professional mixed martial artist who competes in the Ultimate Fighting Championship (UFC). 
+                He is a former Cage Warriors featherweight champion and has an impressive MMA record of 16 wins and 3 losses. 
+                Pimblett is known for his charismatic personality, flashy striking style, and ability to finish fights both on the feet and on the ground. </p>
+            <img class="imagein" src="media/Paddy-pimblet.jpg" alt="paddy-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="alex-card hidden allcards" id="alex">
+            <audio id="audio-alex" src="sounds/alex-sound.wav" > </audio>
+            <h2 class="hover_title"> You're like Alex Pereira!</h2>
+            <p class="hover_desc">  Alex Pereira is a Brazilian professional kickboxer and mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC).
+                He is the current UFC middleweight champion and former two-time Glory middleweight champion and has an impressive kickboxing record of 46 wins, 7 losses, and 1 draw.
+                Pereira is known for his knockout power, precise striking, and aggressive fighting style, and is considered one of the best middleweight kickboxers in the world. </p>
+            <img class="imagein" src="media/pereira.jpg" alt="alex-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="glover-card hidden allcards" id="glover">
+            <audio id="audio-glover" src="sounds/glover-sound.wav" > </audio>
+            <h2 class="hover_title"> You're like Glover Texiera!</h2>
+            <p class="hover_desc"> Glover Teixeira is a Brazilian professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC). 
+                He is a former UFC light heavyweight title challenger and has an impressive professional MMA record of 32 wins and 8 losses. 
+                Teixeira is known for his strong grappling and jiu-jitsu skills, as well as his heavy hands and durability in the octagon. </p>
+            <img class="imagein" src="media/Texiera.jpg" alt="glover-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="tony-card hidden allcards" id="tony">
+            <audio id="audio-tony" src="sounds/tony-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Tony Furguson!</h2>
+            <p class="hover_desc"> Tony Ferguson is an American retired professional mixed martial artist who competed in the UFC. 
+                He is a former interim UFC lightweight champion and had an impressive professional MMA record of 25 wins and 5 losses. 
+                Ferguson is known for his unorthodox and unpredictable fighting style, as well as his impressive grappling and submission skills, making him a fan favorite and one of the top lightweights in the UFC for many years. </p>
+            <img class="imagein" src="media/tony-ferguson.jpg" alt="tony-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="volk-card hidden allcards" id="volk">
+            <audio id="audio-volk" src="sounds/volk-sound.mp4" > </audio>
+            <h2 class="hover_title"> You're like Alexander Volkanovski!</h2>
+            <p class="hover_desc"> Alexander Volkanovski is an Australian professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC). 
+                He is a former professional rugby player and has an impressive MMA record of 23 wins and only 1 loss. 
+                Volkanovski is known for his impressive wrestling and grappling abilities, as well as his powerful striking and conditioning.
+                He is the current UFC featherweight champion and considered one of the best fighters in his weight class. </p>
+            <img class="imagein" src="media/Volk.jpg" alt="volk-img-card">
+            <div class="sign" data-content-area></div>
+            <button class="close-card">X</button>
+        </div>
+
+        <div class="adesanya">
+            <div class="box">
+                <img src="media/Adesanya.jpg" alt="adesanya"/>
+                <button class="learn-more1 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="islam">
+            <div class="box">
+                <img src="media/Islam.jpg" alt="Islam Makhachev"/>
+                <button class="learn-more2 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="jiri">
+            <div class="box">
+                <img src="media/Jiri.jpg" alt="Jiri Prochazka"/>
+                <button class="learn-more3 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="jones">
+            <div class="box">
+                <img src="media/JONES_JON_12-29.jpg" alt="Jon Jones"/>
+                <button class="learn-more4 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="khabib">
+            <div class="box">
+                <img src="media/Khabib.jpg" alt="Khabib Nurmagomedov"/>
+                <button class="learn-more5 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="connor">
+            <div class="box">
+                <img src="media/Mcgregor.jpg" alt="Connor McGregor"/>
+                <button class="learn-more6 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="mighty">
+            <div class="box">
+                <img src="media/Mighty-mouse.jpg" alt="Demetrius Johnson"/>
+                <button class="learn-more7 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="paddy">
+            <div class="box">
+                <img src="media/Paddy-pimblet.jpg" alt="Paddy Pimblett"/>
+                <button class="learn-more8 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="alex">
+            <div class="box">
+                <img src="media/pereira.jpg" alt="Alex pereira"/>
+                <button class="learn-more9 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="glover">
+            <div class="box">
+                <img src="media/Texiera.jpg" alt="Glover Texiera"/>
+                <button class="learn-more10 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="tony">
+            <div class="box">
+                <img src="media/tony-ferguson.jpg" alt="Tony Ferguson"/>
+                <button class="learn-more11 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <div class="volk">
+            <div class="box">
+                <img src="media/Volk.jpg" alt="Alexander Volkanovski"/>
+                <button class="learn-more12 fighter" type="button"> Learn More</button>
+            </div>
+        </div>
+
+        <p class="hidden">
+            Israel Adesanya is a Nigerian-born New Zealand professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC).
+            He is a former kickboxing and boxing champion and has an undefeated professional MMA record of 21 wins and 1 loss. 
+            Adesanya is known for his striking skills, technical precision, and flamboyant personality both in and out of the octagon.
+        </p>
+        <p class="hidden">
+            Conor McGregor is an Irish professional mixed martial artist and boxer. 
+            He is a former UFC featherweight and lightweight champion and has a professional MMA record of 22 wins and 5 losses. 
+            McGregor is known for his striking abilities, brash personality, and ability to promote fights, which has made him one of the biggest stars in combat sports history.
+        </p>
+        <p class="hidden">
+            Alexander Volkanovski is an Australian professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC). 
+            He is a former professional rugby player and has an impressive MMA record of 23 wins and only 1 loss. 
+            Volkanovski is known for his impressive wrestling and grappling abilities, as well as his powerful striking and conditioning.
+            He is the current UFC featherweight champion and considered one of the best fighters in his weight class.
+        </p>
+        <p class="hidden">
+            Islam Makhachev is a Russian professional mixed martial artist who competes in the Ultimate Fighting Championship (UFC). 
+            He is a former Combat Sambo world champion and has an impressive MMA record of 20 wins and 1 loss. 
+            Makhachev is known for his grappling skills, particularly his dominant wrestling and impressive submission game, and is considered one of the top lightweight prospects in the UFC.
+        </p>
+        <p class="hidden">
+            Jon Jones is an American professional mixed martial artist and former UFC light heavyweight champion. 
+            He is widely considered one of the greatest fighters in MMA history, with a professional record of 26 wins, 1 loss, and 1 no contest. 
+            Jones is known for his impressive striking and grappling abilities, as well as his unorthodox fighting style and ability to adapt to his opponents in the octagon.
+        </p>
+        <p class="hidden">
+            Jiri Prochazka is a Czech professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC). 
+            He is a former Rizin Fighting Federation light heavyweight champion and has an impressive MMA record of 28 wins and 4 losses. 
+            Prochazka is known for his unorthodox and creative striking style, as well as his durability and toughness in the octagon.
+        </p>
+        <p class="hidden">
+            Khabib Nurmagomedov is a retired Russian professional mixed martial artist who competed in the Ultimate Fighting Championship (UFC). 
+            He is a former UFC lightweight champion and had an undefeated professional MMA record of 29 wins and 0 losses. 
+            Khabib is widely regarded as one of the greatest fighters in MMA history, known for his dominating wrestling and grappling skills, as well as his impressive striking and conditioning.
+        </p>
+        <p class="hidden">
+            Demetrious Johnson, also known as "Mighty Mouse," is an American retired professional mixed martial artist who competed in the UFC. 
+            He is a former UFC flyweight champion and holds the record for most consecutive title defenses in the division. 
+            Johnson is known for his incredible speed, technical striking and grappling abilities, and strategic fighting style, which made him one of the best pound-for-pound fighters in MMA history.
+        </p>
+        <p class="hidden">
+            Paddy Pimblett is a British professional mixed martial artist who competes in the Ultimate Fighting Championship (UFC). 
+            He is a former Cage Warriors featherweight champion and has an impressive MMA record of 16 wins and 3 losses. 
+            Pimblett is known for his charismatic personality, flashy striking style, and ability to finish fights both on the feet and on the ground.
+        </p>
+        <p class="hidden">
+            Alex Pereira is a Brazilian professional kickboxer and mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC).
+            He is the current UFC middleweight champion and former two-time Glory middleweight champion and has an impressive kickboxing record of 46 wins, 7 losses, and 1 draw.
+            Pereira is known for his knockout power, precise striking, and aggressive fighting style, and is considered one of the best middleweight kickboxers in the world.
+        </p>
+        <p class="hidden">
+            Glover Teixeira is a Brazilian professional mixed martial artist who currently competes in the Ultimate Fighting Championship (UFC). 
+            He is a former UFC light heavyweight title challenger and has an impressive professional MMA record of 32 wins and 8 losses. 
+            Teixeira is known for his strong grappling and jiu-jitsu skills, as well as his heavy hands and durability in the octagon.
+        </p>
+        <p class="hidden">
+            Tony Ferguson is an American retired professional mixed martial artist who competed in the UFC. 
+            He is a former interim UFC lightweight champion and had an impressive professional MMA record of 25 wins and 5 losses. 
+            Ferguson is known for his unorthodox and unpredictable fighting style, as well as his impressive grappling and submission skills, making him a fan favorite and one of the top lightweights in the UFC for many years.
+        </p>
 <script src="javascript"></script>
     </main>
 </body>
