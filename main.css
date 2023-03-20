@@ -5,6 +5,7 @@ html {
   background-size: auto;
   background-size:cover;
 }
+
 main {
     margin: auto;
     display: flex;
@@ -24,15 +25,45 @@ border-style: groove;
 border-color: grey;
 border
 }
+
+.box img{
+  max-width: 400px;
+  height: 300px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  object-fit: cover;
+}
+
+.sign {
+  text-align: center;
+  padding: 1rem;
+}
 /*.fighter {
   display: grid;
   flex-direction: row;
   justify-content: space-between;
   align-items: space-between;
 }*/
+.fighter {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: .5rem;
+  display: block;
+  margin: auto;
+  margin-bottom: auto;
+}
+
+.fighter {
+  transition: all .2s ease-in-out; 
+}
+
+.fighter:hover {
+  transform: scale(1.1);
+}
 
 .adesanya-card, .islam-card, .jiri-card, .jones-card, .khabib-card, .connor-card, .mighty-card, .paddy-card, .alex-card, .glover-card, .tony-card, .volk-card, .question-card {
-  background-color: #fff;
+  background-color: white;
   position: fixed;
   max-height: 90vh;
   min-height: 31.25rem;
@@ -47,7 +78,6 @@ border
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  font-color
   
 }
 
@@ -81,18 +111,18 @@ h1, h2 {
   transform: scale(1.1);
 }
 .hover_title {
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 1rem;
 }
 .hover_desc {
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 30px;
   padding: 1rem;
 }
 
 .question-button {
   color: white;
-  background:black;
+  background-color:black;
   border-radius: 5px;
   padding: .3rem;
   display: block;

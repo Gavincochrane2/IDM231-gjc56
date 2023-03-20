@@ -15,100 +15,6 @@ const learnButton10 = document.querySelector(".learn-more10");
 const learnButton11 = document.querySelector(".learn-more11");
 const learnButton12 = document.querySelector(".learn-more12");
 
- 
-  function getYourSign(month, day, year) {
-
-  let astrological_sign = "";
-
-if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-    astrological_sign = 'Capricorn'
-  } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
-    astrological_sign = 'Sagittarius'
-  } else if ((month == 10 && day >= 24) || (month == 11 && day <= 21)) {
-    astrological_sign = 'Scorpio'
-  } else if ((month == 9 && day >= 23) || (month == 10 && day <= 23)) {
-    astrological_sign = 'Libra'
-  } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
-    astrological_sign = 'Virgo'
-  } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
-    astrological_sign = 'Leo'
-  } else if ((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
-    astrological_sign = 'Cancer'
-  } else if ((month == 5 && day >= 21) || (month == 6 && day <= 21)) {
-    astrological_sign = 'Gemini'
-  } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
-    astrological_sign = 'Taurus'
-  } else if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
-    astrological_sign = 'Aries'
-  } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-    astrological_sign = 'Pisces'
-  } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
-    astrological_sign = 'Aquarius'
-  }
-}
-
-let fighter = "";
-
-if (astrological_sign = "Aquarius") {
-    audio = document.getElementById("audio-adesanya");
-    fighter = document.getElementById("adesanya");
-}
-else if (astrological_sign == "Pisces") {
-    audio = document.getElementById("audio-islam");
-    fighter = document.getElementById("islam");
-}
-else if (astrological_sign == "Aries") {
-    audio = document.getElementById("audio-jiri");
-    fighter = document.getElementById("jiri");
-}
-else if (astrological_sign == "Taurus") {
-    audio = document.getElementById("audio-jones");
-    fighter = document.getElementById("jones");
-}
-else if (astrological_sign == "Gemini") {
-    audio = document.getElementById("audio-khabib");
-    fighter = document.getElementById("khabib");
-}
-else if (astrological_sign == "Cancer") {
-    audio = document.getElementById("audio-connor");
-    fighter = document.getElementById("connor");
-}
-else if (astrological_sign == "Leo") {
-    audio = document.getElementById("audio-mighty");
-    fighter = document.getElementById("mighty");
-}
-else if (astrological_sign == "Virgo") {
-    audio = document.getElementById("audio-paddy");
-    fighter = document.getElementById("paddy");
-}
-else if (astrological_sign == "Libra") {
-    audio = document.getElementById("audio-alex");
-    fighter = document.getElementById("alex");
-}
-else if (astrological_sign == "Scorpio") {
-    audio = document.getElementById("audio-glover");
-    fighter = document.getElementById("glover");
-}
-else if (astrological_sign == "Sagittarius") {
-    audio = document.getElementById("audio-tony");
-    fighter = document.getElementById("tony");
-}
-else if (astrological_sign == "Capricorn") {
-    audio = document.getElementById("audio-volk");
-    fighter = document.getElementById("volk");
-}
-
-  submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    const dateInput = document.querySelector(".js-date-input");
-    let birthDate = new Date(dateInput.value);
-    let month = birthDate.getMonth() + 1;
-    let day = birthDate.getDate() + 1;
-    let year = birthDate.getFullYear();
-
-    getYourSign(month, day, year);
-});
-
 closeButton.forEach(element => {
   element.addEventListener("click", function (event) {
       event.preventDefault();
@@ -117,24 +23,24 @@ questionButton.classList.add("hidden");
 });
 });
 
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  const dateInput = document.querySelector(".js-date-input");
+  let birthDate = new Date(dateInput.value);
+  let month = birthDate.getMonth() + 1;
+  let day = birthDate.getDate() + 1;
+  let year = birthDate.getFullYear();
 
-fighter.classList.remove("hidden");
-    audio.play();
-    console.log(closeButton);
-    closeButton.forEach(element => {
-        element.addEventListener("click", function (event) {
-            event.preventDefault();
-            fighter.classList.add("hidden");
-            audio.pause();
-        });
-    });
+  getYourSign(month, day, year);
+});
 
-    questionButton.addEventListener("click", function () {
+questionButton.addEventListener("click", function () {
       const questionButton = document.querySelector(".question-card");
       questionButton.classList.toggle("hidden");
   });
-  
-  /* gallery learn more */
+
+
+/* gallery learn more */
   learnButton1.addEventListener("click", function () {
       const learnButton1 = document.querySelector(".adesanya-card");
       learnButton1.classList.toggle("hidden");
@@ -279,3 +185,193 @@ fighter.classList.remove("hidden");
       });
       });
   });
+
+function getYourSign(month, day, year) {
+  if (month >= 3 && month <= 4) { /*Aries*/
+      if (month == 3 && day < 21) { /*starting date*/
+          yourSign = "Pisces"; /*month before*/
+      }
+      else if (month == 4 && day > 19) { /*month after*/
+          yourSign = "Taurus";
+      }
+      else {
+          yourSign = "Aries"; /*month of*/
+      }
+  }
+
+  else if (month >= 4 && month <= 5) { /* Taurus*/
+      if (month == 4 && day < 20) { /*starting date*/
+           yourSign = "Aries"; /*month before*/
+      }
+      else if (month == 5 && day > 20) { /*month after*/
+           yourSign = "Gemini";
+      }
+      else {
+           yourSign = "Taurus"; /*month of*/
+      }
+  }
+  else if (month >= 5 && month <= 6) { /* Gemini*/
+      if (month == 5 && day < 21) { /*starting date*/
+           yourSign = "Taurus"; /*month before*/
+      }
+      else if (month == 6 && day > 20) { /*month after*/
+           yourSign = "Cancer";
+      }
+      else {
+           yourSign = "Gemini"; /*month of*/
+      }
+  }
+  else if (month >= 6 && month <= 7) { /* Cancer*/
+      if (month == 6 && day < 21) { /*starting date*/
+          yourSign = "Gemini"; /*month before*/
+      }
+      else if (month == 7 && day > 22) { /*month after*/
+           yourSign = "Leo";
+      }
+      else {
+           yourSign = "Cancer";/*month of*/
+      }
+  }
+  else if (month >= 7 && month <= 8) { /* Leo*/
+      if (month == 7 && day < 23) { /*starting date*/
+           yourSign = "Cancer"; /*month before*/
+      }
+      else if (month == 7 && day > 22) { /*month after*/
+           yourSign = "Virgo";
+      }
+      else {
+           yourSign = "Leo";/*month of*/
+      }
+  }
+  else if (month >= 8 && month <= 9) { /* Virgo*/
+      if (month == 8 && day < 23) { /*starting date*/
+           yourSign = "Leo"; /*month before*/
+      }
+      else if (month == 7 && day > 22) { /*month after*/
+           yourSign = "Libra";
+      }
+      else {
+           yourSign = "Virgo"; /*month of*/
+      }
+  }
+  else if (month >= 9 && month <= 10) { /* Libra*/
+      if (month == 9 && day < 23) { /*starting date*/
+           yourSign = "Virgo"; /*month before*/
+      }
+      else if (month == 7 && day > 22) { /*month after*/
+           yourSign = "Scorpio";
+      }
+      else {
+           yourSign = "Libra"; /*month of*/
+      }
+  }
+  else if (month >= 10 && month <= 11) { /* Scorpio*/
+      if (month == 10 && day < 23) { /*starting date*/
+           yourSign = "Libra"; /*month before*/
+      }
+      else if (month == 11 && day > 21) { /*month after*/
+           yourSign = "Sagittarius";
+      }
+      else {
+           yourSign = "Scorpio"; /*month of*/
+      }
+  }
+  else if (month >= 11 && month <= 12) { /* Sagittarius*/
+      if (month == 11 && day < 22) { /*starting date*/
+           yourSign = "Scorpio"; /*month before*/
+      }
+      else if (month == 12 && day > 21) { /*month after*/
+           yourSign = "Capricorn";
+      }
+      else {
+           yourSign = "Sagittarius"; /*month of*/
+      }
+  }
+  else if (month >= 12 && month <= 1) { /* Capricorn*/
+      if (month == 12 && day < 22) { /*starting date*/
+           yourSign = "Sagittarius";/*month before*/
+      }
+      else if (month == 1 && day > 19) { /*month after*/
+           yourSign = "Aquarius";
+      }
+      else {
+           yourSign = "Capricorn";/*month of*/
+      }
+  }
+  else if (month >= 1 && month <= 2) { /* Aquarius*/
+      if (month == 1 && day < 20) { /*starting date*/
+           yourSign = "Capricorn"; /*month before*/
+      }
+      else if (month == 2 && day > 18) { /*month after*/
+           yourSign = "Pisces";
+      }
+      else {
+           yourSign = "Aquarius"; /*month of*/
+      }
+  }
+  else {
+       yourSign = "Pisces";
+  }
+}
+
+let fighter;
+
+if (yourSign == "Aquarius") {
+    audio = document.getElementById("audio-adesanya");
+    fighter = document.getElementById("adesanya");
+}
+else if (yourSign == "Pisces") {
+    audio = document.getElementById("audio-islam");
+    fighter = document.getElementById("islam");
+}
+else if (yourSign == "Aries") {
+    audio = document.getElementById("audio-jiri");
+    fighter = document.getElementById("jiri");
+}
+else if (yourSign == "Taurus") {
+    audio = document.getElementById("audio-jones");
+    fighter = document.getElementById("jones");
+}
+else if (yourSign == "Gemini") {
+    audio = document.getElementById("audio-khabib");
+    fighter = document.getElementById("khabib");
+}
+else if (yourSign == "Cancer") {
+    audio = document.getElementById("audio-connor");
+    fighter = document.getElementById("connor");
+}
+else if (yourSign == "Leo") {
+    audio = document.getElementById("audio-mighty");
+    fighter = document.getElementById("mighty");
+}
+else if (yourSign == "Virgo") {
+    audio = document.getElementById("audio-paddy");
+    fighter = document.getElementById("paddy");
+}
+else if (yourSign == "Libra") {
+    audio = document.getElementById("audio-alex");
+    fighter = document.getElementById("alex");
+}
+else if (yourSign == "Scorpio") {
+    audio = document.getElementById("audio-glover");
+    fighter = document.getElementById("glover");
+}
+else if (yourSign == "Sagittarius") {
+    audio = document.getElementById("audio-tony");
+    fighter = document.getElementById("tony");
+}
+else if (yourSign == "Capricorn") {
+    audio = document.getElementById("audio-volk");
+    fighter = document.getElementById("volk");
+}
+
+fighter.classList.remove("hidden");
+    audio.play();
+    console.log(closeButton);
+    closeButton.forEach(element => {
+        element.addEventListener("click", function (event) {
+            event.preventDefault();
+            fighter.classList.add("hidden");
+            audio.pause();
+        })
+    })
