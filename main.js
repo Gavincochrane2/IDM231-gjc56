@@ -14,6 +14,8 @@ const learnButton9 = document.querySelector(".learn-more9");
 const learnButton10 = document.querySelector(".learn-more10");
 const learnButton11 = document.querySelector(".learn-more11");
 const learnButton12 = document.querySelector(".learn-more12");
+let yourSign = '';
+let fighter = '';
 
 closeButton.forEach(element => {
   element.addEventListener("click", function (event) {
@@ -314,58 +316,58 @@ function getYourSign(month, day, year) {
   }
 }
 
-let fighter;
 
-if (yourSign == "Aquarius") {
+
+if (yourSign === "Aquarius") {
     audio = document.getElementById("audio-adesanya");
     fighter = document.getElementById("adesanya");
 }
-else if (yourSign == "Pisces") {
+else if (yourSign === "Pisces") {
     audio = document.getElementById("audio-islam");
     fighter = document.getElementById("islam");
 }
-else if (yourSign == "Aries") {
+else if (yourSign === "Aries") {
     audio = document.getElementById("audio-jiri");
     fighter = document.getElementById("jiri");
 }
-else if (yourSign == "Taurus") {
+else if (yourSign === "Taurus") {
     audio = document.getElementById("audio-jones");
     fighter = document.getElementById("jones");
 }
-else if (yourSign == "Gemini") {
+else if (yourSign === "Gemini") {
     audio = document.getElementById("audio-khabib");
     fighter = document.getElementById("khabib");
 }
-else if (yourSign == "Cancer") {
+else if (yourSign === "Cancer") {
     audio = document.getElementById("audio-connor");
     fighter = document.getElementById("connor");
 }
-else if (yourSign == "Leo") {
+else if (yourSign === "Leo") {
     audio = document.getElementById("audio-mighty");
     fighter = document.getElementById("mighty");
 }
-else if (yourSign == "Virgo") {
+else if (yourSign === "Virgo") {
     audio = document.getElementById("audio-paddy");
     fighter = document.getElementById("paddy");
 }
-else if (yourSign == "Libra") {
+else if (yourSign === "Libra") {
     audio = document.getElementById("audio-alex");
     fighter = document.getElementById("alex");
 }
-else if (yourSign == "Scorpio") {
+else if (yourSign === "Scorpio") {
     audio = document.getElementById("audio-glover");
     fighter = document.getElementById("glover");
 }
-else if (yourSign == "Sagittarius") {
+else if (yourSign === "Sagittarius") {
     audio = document.getElementById("audio-tony");
     fighter = document.getElementById("tony");
 }
-else if (yourSign == "Capricorn") {
+else if (yourSign === "Capricorn") {
     audio = document.getElementById("audio-volk");
     fighter = document.getElementById("volk");
 }
 
-fighter.classList.remove("hidden");
+fighter.classList.remove('hidden');
     audio.play();
     console.log(closeButton);
     closeButton.forEach(element => {
